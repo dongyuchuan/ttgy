@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      //https://wap.fruitday.com/v3/ad/homepage?connect_id=&type=0&lonlat=116.25153%2C40.11624&ad_code=110114&tab_id=
+      '/v3':{//这里需要匹配的路径，如果匹配上了，则代理目标服务器上
+        target:'https://wap.fruitday.com',
+        changeOrigin:true,//开启代理
+        pathRewrite:{'^/v3': '/v3'}//对方问路径进行替换工作
+      }
+    },
+
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

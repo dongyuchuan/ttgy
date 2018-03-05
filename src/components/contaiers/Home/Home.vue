@@ -1,12 +1,22 @@
 <template>
   <div class="main-box app-home">
-      home
+      <banner></banner>
+      <sections></sections>
+      
   </div>
 </template>
 
 <script>
+
+import Banner from './Banner'
+import Sections from './Sections'
+
+
 export default {
-  name:'app-home'
+  name:'app-home',
+  components: {
+    Banner,Sections
+  }
 }
 </script>
 

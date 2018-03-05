@@ -6,6 +6,9 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+//swiper
+import '../node_modules/swiper/dist/css/swiper.min.css'
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
