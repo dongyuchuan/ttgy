@@ -9,9 +9,18 @@ Vue.config.productionTip = false
 //swiper
 import '../node_modules/swiper/dist/css/swiper.min.css'
 
+//mint-ui
+import Mint from 'mint-ui';
+import 'mint-ui/lib/style.css'
+Vue.use(Mint);
+
+//store
+
+import store from './store'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>'

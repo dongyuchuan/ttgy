@@ -1,14 +1,15 @@
 <template>
-    <div class="swiper-container banner">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="item in list" :key="item.id">
-                <img :src="item.image" >
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="item in list" :key="item.id">
+                    <img :src="item.image" >
+                </div>
             </div>
+            <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
         </div>
-         <!-- 如果需要分页器 -->
-    <div class="swiper-pagination"></div>
     </div>
-  
 </template>
 
 <script>
@@ -41,24 +42,27 @@ export default {
     },
     updated(){
         new Swiper ('.swiper-container', {
-            loop: true,
+            slidesPerView: 1,
             autoplay:true,
-             // 如果需要分页器
+            loop: true,
             pagination: {
-                 el: '.swiper-pagination',
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets:true
+
             },
         })  
     }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .banner{
-
+     width: 100%;
     .swiper-wrapper{
 
         .swiper-slide{
-
+            width: 100%;
            img{
                height: 1.6rem;
            } 

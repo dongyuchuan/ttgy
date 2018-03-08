@@ -1,9 +1,9 @@
 <template>
   <div class="app-footer">
-      <a href="#"><i class="iconfont">&#xe699;</i><span>首页</span></a>
-      <a href="#"><i class="iconfont">&#xe66b;</i><span>分类</span></a>
-      <a href="#"><i class="iconfont">&#xe899;</i><span>购物车</span></a>
-      <a href="#"><i class="iconfont">&#xe608;</i><span>我的果园</span></a>
+      <router-link to="/home"><i class="iconfont">&#xe699;</i><span>首页</span></router-link>
+      <router-link to="#"><i class="iconfont">&#xe66b;</i><span>分类</span></router-link>
+      <router-link to="/Cart"><i class="iconfont">&#xe899;</i><span>购物车</span></router-link>
+      <router-link to="/Login"><i class="iconfont">&#xe608;</i><span>我的果园</span></router-link>
   </div>
 </template>
 
@@ -30,6 +30,7 @@ export default {
     height: .42rem;
     font-size: .1rem;
     line-height: 1.2;
+    z-index:999;
     a{
       color: #898989;
       text-align: center;
